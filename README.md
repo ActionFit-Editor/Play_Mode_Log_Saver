@@ -7,7 +7,7 @@
 ```json
 {
   "dependencies": {
-    "com.actionfit.playmodelogsaver": "https://github.com/ActionFit-Editor/Play_Mode_Log_Saver.git#1.0.0"
+    "com.actionfit.playmodelogsaver": "https://github.com/ActionFit-Editor/Play_Mode_Log_Saver.git#1.0.1"
   }
 }
 ```

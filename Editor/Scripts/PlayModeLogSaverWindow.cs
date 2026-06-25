@@ -36,7 +36,7 @@ namespace CustomPackage.PlayModeLogSaver
 
         #region 메뉴
 
-        [MenuItem("Tools/Play Mode Log Saver")]
+        [MenuItem("Tools/ActionFit/Play Mode Log Saver", false, 20)]
         public static void ShowWindow()
         {
             var window = GetWindow<PlayModeLogSaverWindow>("Play Mode Log Saver");
