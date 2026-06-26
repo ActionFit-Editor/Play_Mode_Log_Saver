@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b5ab7e2b67b436db878fd7b023d8616, type: 3}
+  m_Name: ActionFitPackageInfo_SO
+  m_EditorClassIdentifier: 
+  _packageId: com.actionfit.playmodelogsaver
+  _displayName: Play Mode Log Saver
+  _repoName: Play_Mode_Log_Saver
+  _owner: 
+  _status: verified
+  _description: "\uD50C\uB808\uC774 \uBAA8\uB4DC \uC911 \uBC1C\uC0DD\uD55C \uB85C\uADF8\uB97C
+    \uC218\uC9D1\uD574 \uD50C\uB808\uC774 \uC885\uB8CC \uC2DC txt \uD30C\uC77C\uB85C
+    \uC800\uC7A5\uD558\uB294 \uC5D0\uB514\uD130 \uD234. \uC800\uC7A5 \uD3F4\uB354/\uC2A4\uD0DD\uD2B8\uB808\uC774\uC2A4/\uD544\uD130\uB97C
+    \uC124\uC815 SO\uB85C \uC81C\uC5B4\uD569\uB2C8\uB2E4. \uB85C\uADF8 \uCD9C\uB825
+    \uD3F4\uB354 \uAE30\uBCF8\uAC12\uC740 Assets/Logs(\uC18C\uBE44\uC790 \uD504\uB85C\uC81D\uD2B8)."
+  _releaseNote: "package_catalog/package_versions \uCE74\uD0C8\uB85C\uADF8 \uB9C8\uC774\uADF8\uB808\uC774\uC158\uC744
+    \uC704\uD55C \uC7AC\uBC30\uD3EC \uBC84\uC804"
+  _dependenciesOverride: 
