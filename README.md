@@ -7,16 +7,23 @@
 ```json
 {
   "dependencies": {
-    "com.actionfit.playmodelogsaver": "https://github.com/ActionFit-Editor/Play_Mode_Log_Saver.git#1.0.1"
+    "com.actionfit.playmodelogsaver": "https://github.com/ActionFit-Editor/Play_Mode_Log_Saver.git#1.0.4"
   }
 }
 ```
+
+## Unity Menu
+
+- Package root: `Tools > Package > Play Mode Log Saver`.
+- README: `Tools > Package > Play Mode Log Saver > README`.
+- Setting SO: `Tools > Package > Play Mode Log Saver > Setting SO`.
+- Package commands stay under the same package root and appear above the separated README/Setting SO entries when those entries exist.
 
 ## 구성
 
 - **Editor** (`com.actionfit.playmodelogsaver.Editor`):
   - `PlayModeLogSaver` — 로그 수집·저장 (InitializeOnLoad 자동)
-  - `PlayModeLogSaverWindow` — 메뉴 `Tools > Play Mode Log Saver`
+  - `PlayModeLogSaverWindow` — 메뉴 `Tools > Package > Play Mode Log Saver > Open Window`
   - `PlayModeLogSettings` — 설정 SO
 
 ## 설정·출력
