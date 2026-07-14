@@ -1,0 +1,4 @@
+interface:
+  display_name: "Summarize Latest PlayMode Log"
+  short_description: "Summarize the latest saved PlayMode log safely"
+  default_prompt: "Use $playmode-logs-latest to summarize the newest saved PlayMode log without modifying it."

@@ -1,6 +1,6 @@
 {
     "name":  "com.actionfit.playmodelogsaver",
-    "version":  "1.0.4",
+    "version":  "1.0.5",
     "displayName":  "Play Mode Log Saver",
     "description":  "플레이 모드 중 발생한 로그를 수집해 플레이 종료 시 txt 파일로 저장하는 에디터 툴. 저장 폴더/스택트레이스/필터를 설정 SO로 제어합니다. 로그 출력 폴더 기본값은 Assets/Logs(소비자 프로젝트).",
     "unity":  "6000.2",

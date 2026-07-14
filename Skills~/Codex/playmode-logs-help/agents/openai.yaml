@@ -1,0 +1,4 @@
+interface:
+  display_name: "PlayMode Logs Help"
+  short_description: "Explain saved PlayMode logs and safe diagnostics"
+  default_prompt: "Use $playmode-logs-help to explain Play Mode Log Saver setup and diagnostic skills."

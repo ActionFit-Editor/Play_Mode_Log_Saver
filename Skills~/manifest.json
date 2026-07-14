@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 2,
+  "skillPrefix": "playmode-logs",
+  "helpSkill": "playmode-logs-help",
+  "skills": [
+    {
+      "name": "playmode-logs-help",
+      "agents": ["codex", "claude"],
+      "includeShared": false,
+      "access": "read-only"
+    },
+    {
+      "name": "playmode-logs-latest",
+      "agents": ["codex", "claude"],
+      "includeShared": false,
+      "access": "read-only"
+    }
+  ]
+}

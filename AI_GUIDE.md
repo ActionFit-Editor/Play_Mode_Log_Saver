@@ -7,7 +7,7 @@ This file is shipped inside the UPM package so an AI assistant in a consuming Un
 - Package ID: `com.actionfit.playmodelogsaver`
 - Display name: Play Mode Log Saver
 - Repository: `https://github.com/ActionFit-Editor/Play_Mode_Log_Saver.git`
-- Current package version at generation time: `1.0.4`
+- Current package version at generation time: `1.0.5`
 - Unity version: `6000.2`
 
 ## Purpose
@@ -53,6 +53,14 @@ Read this file when:
 - Common consuming-project log path: `Assets/CustomPackage/PlayModeLogSaver/Log/`.
 - Use this guide when changing play mode log capture, save paths, file naming, or log settings.
 - Runtime-only content flow failures are often diagnosed by checking the latest saved PlayMode log.
+
+## Agent Skills
+
+- `Skills~/manifest.json` uses schema v2 with the unique `playmode-logs` prefix.
+- `playmode-logs-help` and `playmode-logs-latest` are read-only for Codex and Claude.
+- The latest-log skill locates existing settings and the newest saved `*_PlayLog.txt` without calling `PlayModeLogSaver.Settings`, which may create an asset.
+- Summaries must minimize log reads, group failures, cap examples, redact sensitive identifiers and payloads, and never copy, upload, modify, or delete logs.
+- The installed help skill must read generated `PACKAGE_SKILLS.md`; do not author that reserved file in package sources.
 
 ## Package Tools Menu
 
