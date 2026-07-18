@@ -7,17 +7,17 @@
 ```json
 {
   "dependencies": {
-    "com.actionfit.playmodelogsaver": "https://github.com/ActionFit-Editor/Play_Mode_Log_Saver.git#1.0.5"
+    "com.actionfit.playmodelogsaver": "https://github.com/ActionFit-Editor/Play_Mode_Log_Saver.git#1.0.6"
   }
 }
 ```
 
-## Unity Menu
+## Unity 메뉴
 
 - Package root: `Tools > Package > Play Mode Log Saver`.
 - README: `Tools > Package > Play Mode Log Saver > README`.
 - Setting SO: `Tools > Package > Play Mode Log Saver > Setting SO`.
-- Package commands stay under the same package root and appear above the separated README/Setting SO entries when those entries exist.
+- 패키지 명령은 같은 package root 아래에 유지하며 README/Setting SO 항목이 있으면 분리된 해당 항목보다 위에 표시합니다.
 
 ## 구성
 
@@ -32,7 +32,7 @@
 - 로그 출력 폴더 기본값: `Assets/Logs` (설정 SO의 Log Folder Path로 변경 가능).
 - 패키지 자체에는 설정/로그를 저장하지 않습니다.
 
-## Agent Skills
+## Agent Skill 안내
 
 schema v2 `Skills~/manifest.json`이 Codex와 Claude에 다음 read-only 스킬을 제공합니다.
 
