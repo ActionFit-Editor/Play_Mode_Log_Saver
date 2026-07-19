@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Reflection;
 using System.Text;
+using ActionFit.SOSingleton.Editor;
 using UnityEditor;
 using UnityEngine;
 
@@ -17,7 +18,6 @@ namespace CustomPackage.PlayModeLogSaver
     {
         #region Constants
 
-        private const string SETTINGS_PATH = "Assets/Editor/PlayModeLogSaver/PlayModeLogSettings.asset";
         private const string PLAY_LOG_PREFIX = "PlayLog";
         private const string CONSOLE_LOG_PREFIX = "ConsoleLog";
         private const string LOG_FILE_EXTENSION = ".txt";
@@ -29,9 +29,6 @@ namespace CustomPackage.PlayModeLogSaver
         // 수집된 로그 목록
         private static readonly List<LogEntry> _logs = new();
 
-        // 설정 캐시
-        private static PlayModeLogSettings _settings;
-
         // 플레이 모드 시작 시간
         private static DateTime _playStartTime;
 
@@ -42,27 +39,7 @@ namespace CustomPackage.PlayModeLogSaver
         // 설정 SO 가져오기 (없으면 생성)
         public static PlayModeLogSettings Settings
         {
-            get
-            {
-                if (_settings == null)
-                {
-                    _settings = AssetDatabase.LoadAssetAtPath<PlayModeLogSettings>(SETTINGS_PATH);
-
-                    if (_settings == null)
-                    {
-                        // 고정 경로에 없으면 타입으로 프로젝트 전체 탐색 (위치 무관)
-                        var guids = AssetDatabase.FindAssets($"t:{nameof(PlayModeLogSettings)}");
-                        if (guids.Length > 0)
-                            _settings = AssetDatabase.LoadAssetAtPath<PlayModeLogSettings>(AssetDatabase.GUIDToAssetPath(guids[0]));
-                    }
-
-                    if (_settings == null)
-                    {
-                        _settings = CreateSettings();
-                    }
-                }
-                return _settings;
-            }
+            get => ActionFitSettingsAssetProvider.GetOrCreate<PlayModeLogSettings>();
         }
 
         // 현재 수집된 로그 수
@@ -75,26 +52,6 @@ namespace CustomPackage.PlayModeLogSaver
         static PlayModeLogSaver()
         {
             EditorApplication.playModeStateChanged += OnPlayModeStateChanged;
-        }
-
-        // 설정 SO 생성
-        private static PlayModeLogSettings CreateSettings()
-        {
-            var settings = ScriptableObject.CreateInstance<PlayModeLogSettings>();
-
-            // 폴더 확인 및 생성
-            string directory = Path.GetDirectoryName(SETTINGS_PATH);
-            if (!Directory.Exists(directory))
-            {
-                Directory.CreateDirectory(directory);
-            }
-
-            AssetDatabase.CreateAsset(settings, SETTINGS_PATH);
-            AssetDatabase.SaveAssets();
-            AssetDatabase.Refresh();
-
-            Debug.Log($"[PlayModeLogSaver] 설정 파일 생성됨: {SETTINGS_PATH}");
-            return settings;
         }
 
         #endregion

@@ -7,10 +7,16 @@ This file is shipped inside the UPM package so an AI assistant in a consuming Un
 - Package ID: `com.actionfit.playmodelogsaver`
 - Display name: Play Mode Log Saver
 - Repository: `https://github.com/ActionFit-Editor/Play_Mode_Log_Saver.git`
-- Current package version at generation time: `1.0.6`
+- Current package version at generation time: `1.0.7`
 - Unity version: `6000.2`
 
 ## Purpose
+
+### Settings SO Lifecycle
+
+- `PlayModeLogSettings` is registered as `EditorOnly` with canonical path `Assets/_Data/_PlayModeLogSaver/PlayModeLogSettings.asset`.
+- `Assets/Editor/PlayModeLogSaver/PlayModeLogSettings.asset` is a declared legacy candidate. Existing filters, output path, and stack-trace values are preserved.
+- The saver resolves through the shared cache; log capture and output behavior are otherwise unchanged.
 
 Play Mode Log Saver saves editor play mode logs. Use `README.md`, `package.json`, package source files, and `Editor/PackageInfo/ActionFitPackageInfo_SO.asset` together to understand the user-facing workflow and catalog metadata.
 

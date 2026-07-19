@@ -2,12 +2,16 @@
 
 플레이 모드 동안의 로그를 수집해 **플레이 종료 시 txt로 저장**하는 Unity 에디터 툴입니다.
 
+## 설정 SO 수명주기
+
+`PlayModeLogSettings`는 `Assets/_Data/_PlayModeLogSaver/PlayModeLogSettings.asset`을 canonical 경로로 사용하며 기존 `Assets/Editor/PlayModeLogSaver/PlayModeLogSettings.asset`도 재사용합니다. 설정 탐색은 캐시되고 기존 output/filter/stack trace 값은 변경하지 않습니다.
+
 ## 설치 (manifest.json, Git URL)
 
 ```json
 {
   "dependencies": {
-    "com.actionfit.playmodelogsaver": "https://github.com/ActionFit-Editor/Play_Mode_Log_Saver.git#1.0.6"
+    "com.actionfit.playmodelogsaver": "https://github.com/ActionFit-Editor/Play_Mode_Log_Saver.git#1.0.7"
   }
 }
 ```

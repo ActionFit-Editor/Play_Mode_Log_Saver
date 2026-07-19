@@ -1,3 +1,4 @@
+using ActionFit.SOSingleton;
 using UnityEngine;
 
 namespace CustomPackage.PlayModeLogSaver
@@ -6,6 +7,13 @@ namespace CustomPackage.PlayModeLogSaver
     /// 플레이 모드 로그 저장 설정을 담는 ScriptableObject.
     /// 로그 저장 폴더 경로와 활성화 여부를 저장합니다.
     /// </summary>
+    [ActionFitSettingsAsset(
+        "PlayModeLogSaver",
+        ActionFitSettingsAssetLifetime.EditorOnly,
+        LegacyPaths = new string[]
+        {
+            "Assets/Editor/PlayModeLogSaver/PlayModeLogSettings.asset"
+        })]
     public class PlayModeLogSettings : ScriptableObject
     {
         [SerializeField] private string _logFolderPath = "Assets/Logs"; // 로그 저장 폴더 경로
